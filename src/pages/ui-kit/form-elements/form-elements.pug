@@ -1,0 +1,32 @@
+extends ../../layout/layout-ui-kit.pug
+
+mixin title(objTitle = {})
+  - 
+    const {
+      titleName = "",
+      titleSubText = "",    
+      } = objTitle;
+
+  div(class= `title`)
+    div(class= `title__name`)= objTitle.titleName
+    - if (titleSubText)
+      div(class= `title__sub-text`)= objTitle.titleSubText
+
+include ../../../components/ui-kit__form-elements/text-field/text-field.pug
+
+block title
+  title Colors & Fonts 
+block content
+  div.form-elements 
+    div.form-elements__colum-1
+      div.colum-1__text-field_type-default
+        +title({titleName: "Text Field", titleSubText: "Default"})
+        +form-input({placeholder: "Email", name: "email", type: "email", hasSubmitButton: true})
+      div.colum-1__text-field_type-focus
+        +title({titleName: "Text Field", titleSubText: "Hover / Focus"})
+        +form-input({placeholder: "Text field", name: "someText", type: "text", value: "This is pretty awesome",})
+    div.form-elements__colum-2 colum-2    
+    div.form-elements__colum-3 colum-3
+    div.form-elements__row-1 row-1
+    div.form-elements__row-2 row-2
+    div.form-elements__row-3 row-3

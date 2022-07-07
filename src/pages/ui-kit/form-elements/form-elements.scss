@@ -1,0 +1,39 @@
+@import 'shared/styles/colors.scss';
+@import 'shared/styles/fonts.scss';
+
+.form-elements {
+  width: 1140px;
+  padding: 0 150px 0 150px;
+  display: grid;
+  grid-template-columns: min-content min-content min-content;
+  grid-template-rows: min-content min-content min-content;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+
+  &__name {
+    font-weight: 700;
+    font-size: $font-H3;
+    color: $color-dark-shade-100;
+    text-transform: uppercase;
+  }
+  &__sub-text {
+    font-size: $font-H3;
+    color: $color-dark-shade-50;
+    text-transform: uppercase;
+  }
+}
+
+.colum-1 {
+  &__text-field {
+    &_type-default,&_type-focus {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+  }
+
+}
